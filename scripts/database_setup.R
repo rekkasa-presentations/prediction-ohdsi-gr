@@ -15,7 +15,7 @@ cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(
   cohortIds = cohortIds
 )
 
-cohortTableNames <- CohortGenerator::getCohortTableNames(cohortTable = "summerschool")
+cohortTableNames <- CohortGenerator::getCohortTableNames(cohortTable = "cohort")
 
 # Next create the tables on the database
 CohortGenerator::createCohortTables(
@@ -31,4 +31,10 @@ cohortsGenerated <- CohortGenerator::generateCohortSet(
   cohortDatabaseSchema = "main",
   cohortTableNames = cohortTableNames,
   cohortDefinitionSet = cohortDefinitionSet
+)
+
+CohortGenerator::dropCohortStatsTables(
+  connectionDetails = connectionDetails,
+  cohortDatabaseSchema = "main",
+  cohortTableNames = cohortTableNames
 )

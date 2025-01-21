@@ -16,13 +16,15 @@ covariateSettings <- FeatureExtraction::createCovariateSettings(
 )
 
 databaseDetails <- PatientLevelPrediction::createDatabaseDetails(
+  cdmDatabaseName = "Synthea",
+  cdmDatabaseId = "synthea",
   connectionDetails = connectionDetails,
   cdmDatabaseSchema = "main",
   cohortDatabaseSchema = "main",
-  cohortTable = "summerschool",
+  cohortTable = "cohort",
   targetId = 1782815,
   outcomeDatabaseSchema = "main",
-  outcomeTable = "summerschool",
+  outcomeTable = "cohort",
   outcomeIds = 1782813
 )
 
