@@ -1,0 +1,31 @@
+/* css styles */
+
+.title {
+  font-size: 100px !important;
+  color: black !important;
+}
+
+.level2 {
+  font-size: 50px !important;
+  color: black !important;
+}
+
+body ul {
+  font-size: 0.9em;
+}
+
+
+.small-text {
+    font-size: 0.7em;
+}
+
+.slide-datatable {
+    max-width: 60%;
+    max-height: 200px;
+    overflow: auto;
+    font-size: 0.6em;
+}
+
+.reveal .slide-logo {
+   max-height: 1.5em !important;
+}

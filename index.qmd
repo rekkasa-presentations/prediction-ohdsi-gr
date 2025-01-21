@@ -1,0 +1,13 @@
+---
+title: "Home"
+format: html
+---
+
+# Προγνωστικά μοντέλα με τη χρήση πακέτων OHDSI
+
+Αυτή είναι η ιστοσελίδα για την παρουσίαση με τίτλο **Προγνωστικά μοντέλα με τη χρήση πακέτων OHDSI**.
+
+Για την πρακτική εφαρμογή θα χρησιμοποιηθούν δεδομένα από τη προσομοιωμένη βάση δεδομένων
+[Synthea&trade;](https://synthetichealth.github.io/synthea/) διαθέσιμη
+[εδώ](https://drive.google.com/file/d/1l5wq57fAslnoFR2umFQvVZbDiq5IK0UF/view). Η λήψη περιέχει μια βάση δεδομένων
+`duckdb` σε μορφή zip.

@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Προγνωστικά μοντέλα με τη χρήση πακέτων OHDSI"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.html
+      - text: "Presentation"
+        href: prediction_ohdsi_gr.html
+      - text: "Practical"
+        href: Practical.html
+    right:
+      - icon: envelope
+        href: "mailto:arekkas@certh.gr"
+      - icon: github
+        href: "https://github.com/rekkasa-presentations/ml-in-omop-summerschool-2024"
