@@ -11,7 +11,7 @@
     "href": "prediction_ohdsi_gr.html#εισαγωγή",
     "title": "Προγνωστικά μοντέλα με τη χρήση πακέτων OHDSI",
     "section": "Εισαγωγή",
-    "text": "Εισαγωγή\n\n\n\nhttps://rekkasa-presentations.github.io/ml-in-omop-summerschool-2024/"
+    "text": "Εισαγωγή\n\n\n\nhttps://rekkasa-presentations.github.io/prediction-ohdsi-gr/"
   },
   {
     "objectID": "prediction_ohdsi_gr.html#εισαγωγή-1",
@@ -60,7 +60,7 @@
     "href": "prediction_ohdsi_gr.html#ρυθμίσεις-1",
     "title": "Προγνωστικά μοντέλα με τη χρήση πακέτων OHDSI",
     "section": "Ρυθμίσεις",
-    "text": "Ρυθμίσεις\n\n\n\n\nΠεριορισμοί (Restrict settings): Κυρίως χρονικοί περιορισμοί για την ανάλυση.\n\n\n\n\nΔείγματοληψία (Sample settings): Ρυθμίσεις για δειγματοληψία από το υποσύνολο εκπαίδευσης (train set).\n\n\n\n\nFeature engineering: Ρυθμίσεις για την τροποποίηση των χαρακτηριστικών των ασθενών του δείγματος."
+    "text": "Ρυθμίσεις\n\n\n\n\nΠεριορισμοί (Restrict settings): Κυρίως χρονικοί περιορισμοί για την ανάλυση.\n\n\n\n\nΔειγματοληψία (Sample settings): Ρυθμίσεις για δειγματοληψία από το υποσύνολο εκπαίδευσης (train set).\n\n\n\n\nFeature engineering: Ρυθμίσεις για την τροποποίηση των χαρακτηριστικών των ασθενών του δείγματος."
   },
   {
     "objectID": "prediction_ohdsi_gr.html#ρυθμίσεις-2",

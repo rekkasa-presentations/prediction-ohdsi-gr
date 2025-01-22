@@ -17,7 +17,7 @@ css: styles.css
 \
 \
 
-[https://rekkasa-presentations.github.io/ml-in-omop-summerschool-2024/](https://rekkasa-presentations.github.io/ml-in-omop-summerschool-2024/)
+[https://rekkasa-presentations.github.io/prediction-ohdsi-gr/](https://rekkasa-presentations.github.io/prediction-ohdsi-gr/)
 
 
 ---
