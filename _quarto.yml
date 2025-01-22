@@ -6,11 +6,11 @@ website:
   title: "Προγνωστικά μοντέλα με τη χρήση πακέτων OHDSI"
   navbar:
     left:
-      - text: "Home"
+      - text: "Αρχική"
         href: index.html
-      - text: "Presentation"
+      - text: "Παρουσίαση"
         href: prediction_ohdsi_gr.html
-      - text: "Practical"
+      - text: "Κώδικας"
         href: Practical.html
     right:
       - icon: envelope

@@ -7,29 +7,29 @@ covariateSettings <- FeatureExtraction::createCovariateSettings(
   useDemographicsGender = TRUE,
   useDemographicsAge = TRUE,
   useConditionGroupEraLongTerm = TRUE,
-  useConditionGroupEraAnyTimePrior = TRUE,
   useDrugGroupEraLongTerm = TRUE,
-  useDrugGroupEraAnyTimePrior = TRUE,
-  useVisitConceptCountLongTerm = TRUE,
-  longTermStartDays = -365,
+  longTermStartDays = -730,
   endDays = -1
 )
 
 databaseDetails <- PatientLevelPrediction::createDatabaseDetails(
+  cdmDatabaseName = "Synthea",
+  cdmDatabaseId = "synthea",
   connectionDetails = connectionDetails,
   cdmDatabaseSchema = "main",
   cohortDatabaseSchema = "main",
-  cohortTable = "summerschool",
+  cohortTable = "cohort",
   targetId = 1782815,
   outcomeDatabaseSchema = "main",
-  outcomeTable = "summerschool",
+  outcomeTable = "cohort",
   outcomeIds = 1782813
 )
+
 
 restrictPlpDataSettings <- PatientLevelPrediction::createRestrictPlpDataSettings()
 
 populationSettings <- PatientLevelPrediction::createStudyPopulationSettings(
-  washoutPeriod = 364,
+  washoutPeriod = 729,
   firstExposureOnly = FALSE,
   removeSubjectsWithPriorOutcome = TRUE,
   priorOutcomeLookback = 9999,
@@ -46,7 +46,7 @@ splitSettings <- PatientLevelPrediction::createDefaultSplitSetting(
   trainFraction = 0.75,
   testFraction = 0.25,
   type = 'stratified',
-  nfold = 2, 
+  nfold = 3, 
   splitSeed = 1234
 )
 
@@ -73,19 +73,6 @@ modelDesignLasso <- PatientLevelPrediction::createModelDesign(
   modelSettings = PatientLevelPrediction::setLassoLogisticRegression()
 )
 
-modelDesignRandomForest <- PatientLevelPrediction::createModelDesign(
-  targetId = 1782815, 
-  outcomeId = 1782813, 
-  restrictPlpDataSettings = restrictPlpDataSettings, 
-  populationSettings = populationSettings, 
-  covariateSettings = covariateSettings, 
-  featureEngineeringSettings = featureEngineeringSettings,
-  sampleSettings = sampleSettings, 
-  splitSettings = splitSettings, 
-  preprocessSettings = preprocessSettings, 
-  modelSettings = PatientLevelPrediction::setRandomForest()
-)
-
 modelDesignGradientBoosting <- PatientLevelPrediction::createModelDesign(
   targetId = 1782815, 
   outcomeId = 1782813, 
@@ -103,7 +90,6 @@ results <- PatientLevelPrediction::runMultiplePlp(
   databaseDetails = databaseDetails, 
   modelDesignList = list(
     modelDesignLasso, 
-    modelDesignRandomForest, 
     modelDesignGradientBoosting
   ), 
   onlyFetchData = FALSE,

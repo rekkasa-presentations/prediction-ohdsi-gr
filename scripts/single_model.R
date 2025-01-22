@@ -7,11 +7,8 @@ covariateSettings <- FeatureExtraction::createCovariateSettings(
   useDemographicsGender = TRUE,
   useDemographicsAge = TRUE,
   useConditionGroupEraLongTerm = TRUE,
-  useConditionGroupEraAnyTimePrior = TRUE,
   useDrugGroupEraLongTerm = TRUE,
-  useDrugGroupEraAnyTimePrior = TRUE,
-  useVisitConceptCountLongTerm = TRUE,
-  longTermStartDays = -365,
+  longTermStartDays = -730,
   endDays = -1
 )
 
@@ -31,8 +28,7 @@ databaseDetails <- PatientLevelPrediction::createDatabaseDetails(
 restrictPlpDataSettings <- PatientLevelPrediction::createRestrictPlpDataSettings()
 
 populationSettings <- PatientLevelPrediction::createStudyPopulationSettings(
-  washoutPeriod = 364,
-  firstExposureOnly = FALSE,
+  washoutPeriod = 729,
   removeSubjectsWithPriorOutcome = TRUE,
   priorOutcomeLookback = 9999,
   riskWindowStart = 1,
@@ -48,7 +44,7 @@ splitSettings <- PatientLevelPrediction::createDefaultSplitSetting(
   trainFraction = 0.75,
   testFraction = 0.25,
   type = 'stratified',
-  nfold = 2, 
+  nfold = 3, 
   splitSeed = 1234
 )
 
